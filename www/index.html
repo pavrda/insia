@@ -65,7 +65,8 @@ function telnr(o) {
 }
 
 function smsnr(o, p) {
-	var str = o.number.replace(/\+/g, '%252B');
+//	var str = o.number.replace(/\+/g, '%252B');
+	var str = o.number.replace(/\+/g, '%2B');
 	return "sms:?body=" + str + "%0A" + p.title + "%0A" + o.title;
 }
 
