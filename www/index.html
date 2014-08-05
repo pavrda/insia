@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=320, height=device-height" />
+    <title>INSIA Pojišťovny</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <script type="text/javascript" src="phonegap.js"></script>
+    <script type="text/javascript" src="data.js"></script>
+    
+    <link rel="stylesheet" href="jquery.mobile-1.4.3.min.css">
+	<script src="jquery-1.10.2.min.js"></script>
+	<script src="jquery.mobile-1.4.3.min.js"></script>
+    
+<style>
+</style>
+</head>
+<body>
+
+<div data-role="page" id="hlavni" class="hlavni">
+	<div class="hlavniLogo"><img src="img/pojistovny.png"/></div>
+	<div class="hlavniText"><p>Užitečný adresář pojišťoven<br />
+	pro&nbsp;makléře, agenty a finanční poradce<br />
+	<br />
+	Důležité kontakty na všechny pojišťovny<br />
+	 máte stále po&nbsp;ruce a na&nbsp;jednom místě<br />
+	<br />
+	Pošlete snadno svému klientovi číslo<br />
+	na&nbsp;hlášení škody nebo asistenční<br />
+	službu pojišťovny.<br />
+	<br />
+	<a href="#seznam" class="hlavniEnter"><img src="img/ic_enter_app.png" /></a>
+	</p>
+	</div>
+	<div class="hlavniPata">
+	<a href="#onas"><img src="img/ic_about_ia.png" /></a>
+	</div>
+</div>
+<!-- 
+<img src="img/insia_logo.png" />
+ -->
+<div data-role="page" id="seznam" class="seznam">
+	<div data-role="header" data-position="fixed">
+            <a href="#onas" data-transition="none" class="seznamBack"><img src="img/ios7-back-icon-blue.png" height="32" /></a>
+            <h1><img src="img/insia_about.png"/></h1>
+	</div>
+<script>
+	for(var i=0;i<seznam.length;i++) {
+		document.write("<div class=\"seznami\" >");
+		document.write("<a data-transition=\"none\" class=\"seznami\" href=\"#detail" + i + "\">");
+		document.write("<div class=\"seznamLogo\"><img src=\"img/" + seznam[i].icon + "\" /></div>");
+		document.write("<div class=\"seznamLink\">" + seznam[i].title + "</div>");
+		document.write("</a>");
+		document.write("</div>");
+	}
+</script>
+</div>
+
+<script>
+
+function telnr(o) {
+	var str = o.number;
+	return "tel:" + str.replace(/ /g, ''); //.replace(/\+/g, '%2B');
+}
+
+function smsnr(o, p) {
+	var str = o.number.replace(/\+/g, '%252B');
+	return "sms:?body=" + str + "%0A" + p.title + "%0A" + o.title;
+}
+
+
+	for(var i=0;i<seznam.length;i++) {
+		document.write("<div data-role=\"page\" id=\"detail" + i + "\" class=\"detail\">");
+		
+		document.write("<div data-role=\"header\" data-position=\"fixed\">");		
+		document.write("<a href=\"#\" data-transition=\"none\" data-rel=\"back\" class=\"seznamBack\"><img src=\"img/ios7-back-icon-blue.png\" height=\"32\" /></a>");
+		document.write("<h1><img src=\"img/insia_about.png\"/></h1>");
+		document.write("</div>");
+		
+		
+		document.write("<div class=\"detailLogo\"><img src=\"img/" + seznam[i].icon + "\" /></div>");
+		for (var j=0;j<seznam[i].data.length;j++) {
+			document.write("<div class=\"data\">");
+			document.write("<div class=\"dataTitle\">" + seznam[i].data[j].title + "</div>");			
+			document.write("<div class=\"dataPhone\">" + seznam[i].data[j].number + "</div>");			
+			document.write("<div class=\"dataBox\">");
+			document.write("<a href=\"" + telnr(seznam[i].data[j]) + "\"><img src=\"img/btn_txt_call.png\"></a>");
+			document.write("<a href=\"" + smsnr(seznam[i].data[j], seznam[i]) + "\"><img src=\"img/btn_txt_sms.png\"></a>");
+			document.write("</div>");
+			document.write("</div>");
+		}
+		document.write("</div>");
+	}
+</script>
+<div data-role="page" id="onas" class="onas">
+	<div data-role="header" data-position="fixed">
+            <a href="#seznam" data-transition="none" class="seznamBack"><img src="img/ios7-back-icon-blue.png" height="32" /></a>
+            <h1><img src="img/insia_about.png"/></h1>
+	</div>
+	<div class="onasLogo"><img src="img/ia_logo.png"/></div>
+	<div class="onasText"><p>Členům sítě INSIA poskytujeme zázemí<br />
+	silné mezinárodní společnosti a vytváříme<br />
+	ty nejlepší podmínky pro jejich rozvoj.<br />
+	<br />
+	Neurčujeme výkony, neskýváme provize,<br />
+	zaručujeme samostatnost v rozhodování.<br />
+	<br />
+	<a href="http://www.insia.cz/spoluprace" id="onasWeb">www.insia.cz/spoluprace</a><br />
+	<br />
+	<a href="tel:+420739348582" id="onasTel">+ 420 739 348 582</a><br />
+	
+	<div class="dataBox">
+	<a href="tel:+420739348582"><img src="img/btn_txt_call.png"></a>
+	<a href="sms:+420739348582?body=Mam zajem o vice informaci o siti INSIA. Kontaktujte me, prosim"><img src="img/btn_txt_sms.png"></a>
+	</div>
+</div>
+
+</body>
+</html>
+    

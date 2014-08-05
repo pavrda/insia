@@ -1,0 +1,191 @@
+.ui-page .ui-header {
+    background: #f8f8f8 !important;
+}
+
+	
+.ui-header a.seznamBack, .ui-header a.seznamBack:focus, .ui-header a.seznamBack:hover {	
+	background: none;
+    border: none;
+    border: 0px;
+    box-shadow: none;
+	padding: 0px 0px 0px 0px;
+}
+
+
+a.seznamBack img {
+	margin-top: 3px;
+}
+
+.ui-header h1.ui-title {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.ui-header h1.ui-title img {
+	height: 20px;
+}
+
+.hlavni {
+	width: 100%;
+	border: solid 1px black;
+	text-align: center;
+	background: url("../img/main_bg.png");
+	background-size: 100%;
+	background-attachment: fixed;
+}
+
+.hlavniLogo {
+	margin-top: 1em;
+}
+
+.hlavniLogo img {
+	width: 300px;
+}
+
+.hlavniText {
+	font-size: 80%;
+}
+
+.hlavniEnter img {
+	width: 100px;
+}
+
+.hlavniPata {
+	width: 100%;
+	position: absolute;
+	bottom: 1em;
+}
+
+.hlavniPata img {
+	width: 120px;
+}
+
+div.seznam {
+	background-color: #F0F0F0;
+}
+
+div.seznami {
+	xborder: solid 1px #c00000;
+	padding: 0px 10px 0px 10px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+a.seznami {
+	border: solid 1px #c0c0c0;
+	display: block;
+	text-align: left;
+	xmargin: 10px 5px 10px 10px;
+	height: 80px;
+	width: 100%;
+	
+	display: table;
+	overflow: hidden;
+	text-decoration: none;
+	background-color: #FFFFFF;
+}
+
+
+.seznamLogo, .seznamLink {
+	xborder: solid 1px red;
+	display: inline-block;
+}
+
+.seznamLogo img {
+	vertical-align: middle;
+	max-width: 100px;
+	max-height: 60px;
+}
+
+.seznamLogo {
+	width: 120px;
+	text-align: center;
+	height: 100%;
+	
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.seznamLink {
+	text-align: left;
+	font-weight: bold;
+	color: black;
+	font-size: 12pt;
+	
+	display: table-cell;
+	vertical-align: middle;
+	text-decoration: none;
+}
+
+
+
+
+.detail {
+	width: 100%;
+	text-align: center;
+	background: url("../img/main_bg.png");
+	background-size: 100%;
+}
+
+.detailLogo {
+	margin: 1em 1em 1em 1em;
+}
+
+.detailLogo img {
+	max-height: 60px;
+	max-width: 200px;
+}
+
+.data {
+	border: solid 1px #c0c0c0;
+	margin: 0.5em 0.5em 0.5em 0.5em;
+	
+}
+
+
+
+.dataTitle, .dataPhone {
+	text-align: left;
+	margin: 0.5em 0.5em 0em 0.5em;
+}
+
+.dataPhone {
+	font-weight: bold;
+	margin-top: 0em;
+}
+
+.dataBox img {
+	margin: 1em 1em 1em 1em;
+	height: 80px;
+}
+
+
+.onas {
+	width: 100%;
+	border: solid 1px black;
+	text-align: center;
+	background: url("../img/main_bg.png");
+	background-size: 100%;
+	background-attachment: fixed;
+}
+
+.onasLogo {
+	margin-top: 1em;
+}
+
+.onasLogo img {
+	width: 200px;
+}
+
+
+
+
+a#onasWeb {
+	font-weight: normal;
+}
+
+a#onasTel {
+	text-decoration: none;
+	font-weight: normal;
+	color: black;	
+}
