@@ -41,7 +41,7 @@
 <img src="img/insia_logo.png" />
  -->
 <div data-role="page" id="seznam" class="seznam">
-	<div data-role="header" data-position="fixed">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false">
             <a href="#onas" data-transition="none" class="seznamBack"><img src="img/ios7-back-icon-blue.png" height="32" /></a>
             <h1><img src="img/insia_about.png"/></h1>
 	</div>
@@ -74,7 +74,7 @@ function smsnr(o, p) {
 	for(var i=0;i<seznam.length;i++) {
 		document.write("<div data-role=\"page\" id=\"detail" + i + "\" class=\"detail\">");
 		
-		document.write("<div data-role=\"header\" data-position=\"fixed\">");		
+		document.write("<div data-role=\"header\" data-position=\"fixed\" data-tap-toggle=\"false\">");		
 		document.write("<a href=\"#\" data-transition=\"none\" data-rel=\"back\" class=\"seznamBack\"><img src=\"img/ios7-back-icon-blue.png\" height=\"32\" /></a>");
 		document.write("<h1><img src=\"img/insia_about.png\"/></h1>");
 		document.write("</div>");

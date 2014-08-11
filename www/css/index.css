@@ -189,3 +189,18 @@ a#onasTel {
 	font-weight: normal;
 	color: black;	
 }
+
+
+
+/* toto je zde kvuli iOS 7 toolbaru */
+div.ui-header {
+	padding-top: 20px;
+}
+
+a.seznamBack {
+	top: 20px;
+}
+
+.hlavniLogo {
+	padding-top: 20px;
+}
