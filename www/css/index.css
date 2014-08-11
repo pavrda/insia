@@ -62,6 +62,9 @@ a.seznamBack img {
 
 div.seznam {
 	background-color: #F0F0F0;
+	overflow-y:scroll;
+	height: 100%;
+	-webkit-overflow-scrolling: touch;
 }
 
 div.seznami {
