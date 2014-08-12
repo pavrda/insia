@@ -60,6 +60,23 @@ a.seznamBack img {
 	width: 120px;
 }
 
+div.ui-header {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;	
+}
+
+div.content {
+	position: absolute;
+	top: 67px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	overflow-y:scroll;
+	-webkit-overflow-scrolling: touch;		
+}
+
 div.seznam {
 	background-color: #F0F0F0;
 }

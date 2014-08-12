@@ -5,13 +5,12 @@
     <meta name="format-detection" content="telephone=no" />
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=320, height=device-height" />
     <title>INSIA Pojišťovny</title>
-    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />    
+    <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.3.min.css">
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<script src="js/jquery.mobile-1.4.3.min.js"></script>
     <script type="text/javascript" src="phonegap.js"></script>
     <script type="text/javascript" src="data.js"></script>
-    
-    <link rel="stylesheet" href="jquery.mobile-1.4.3.min.css">
-	<script src="jquery-1.10.2.min.js"></script>
-	<script src="jquery.mobile-1.4.3.min.js"></script>
     
 <style>
 </style>
@@ -45,6 +44,7 @@
             <a href="#onas" data-transition="none" class="seznamBack"><img src="img/ios7-back-icon-blue.png" height="32" /></a>
             <h1><img src="img/insia_about.png"/></h1>
 	</div>
+	<div class="content">
 <script>
 	for(var i=0;i<seznam.length;i++) {
 		document.write("<div class=\"seznami\" >");
@@ -55,6 +55,7 @@
 		document.write("</div>");
 	}
 </script>
+	</div>
 </div>
 
 <script>
@@ -79,6 +80,7 @@ function smsnr(o, p) {
 		document.write("<h1><img src=\"img/insia_about.png\"/></h1>");
 		document.write("</div>");
 		
+		document.write("<div class=\"content\">");
 		
 		document.write("<div class=\"detailLogo\"><img src=\"img/" + seznam[i].icon + "\" /></div>");
 		for (var j=0;j<seznam[i].data.length;j++) {
@@ -92,6 +94,7 @@ function smsnr(o, p) {
 			document.write("</div>");
 		}
 		document.write("</div>");
+		document.write("</div>");
 	}
 </script>
 <div data-role="page" id="onas" class="onas">
@@ -99,21 +102,23 @@ function smsnr(o, p) {
             <a href="#seznam" data-transition="none" class="seznamBack"><img src="img/ios7-back-icon-blue.png" height="32" /></a>
             <h1><img src="img/insia_about.png"/></h1>
 	</div>
-	<div class="onasLogo"><img src="img/ia_logo.png"/></div>
-	<div class="onasText"><p>Členům sítě INSIA poskytujeme zázemí<br />
-	silné mezinárodní společnosti a vytváříme<br />
-	ty nejlepší podmínky pro jejich rozvoj.<br />
-	<br />
-	Neurčujeme výkony, neskýváme provize,<br />
-	zaručujeme samostatnost v rozhodování.<br />
-	<br />
-	<a href="http://www.insia.cz/spoluprace" id="onasWeb">www.insia.cz/spoluprace</a><br />
-	<br />
-	<a href="tel:+420739348582" id="onasTel">+ 420 739 348 582</a><br />
-	
-	<div class="dataBox">
-	<a href="tel:+420739348582"><img src="img/btn_txt_call.png"></a>
-	<a href="sms:+420739348582?body=Mam zajem o vice informaci o siti INSIA. Kontaktujte me, prosim"><img src="img/btn_txt_sms.png"></a>
+	<div class="content">
+		<div class="onasLogo"><img src="img/ia_logo.png"/></div>
+		<div class="onasText"><p>Členům sítě INSIA poskytujeme zázemí<br />
+		silné mezinárodní společnosti a vytváříme<br />
+		ty nejlepší podmínky pro jejich rozvoj.<br />
+		<br />
+		Neurčujeme výkony, neskýváme provize,<br />
+		zaručujeme samostatnost v rozhodování.<br />
+		<br />
+		<a href="http://www.insia.cz/spoluprace" id="onasWeb">www.insia.cz/spoluprace</a><br />
+		<br />
+		<a href="tel:+420739348582" id="onasTel">+ 420 739 348 582</a><br />
+		
+		<div class="dataBox">
+		<a href="tel:+420739348582"><img src="img/btn_txt_call.png"></a>
+		<a href="sms:+420739348582?body=Mam zajem o vice informaci o siti INSIA. Kontaktujte me, prosim"><img src="img/btn_txt_sms.png"></a>
+		</div>
 	</div>
 </div>
 
