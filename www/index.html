@@ -78,7 +78,8 @@ function telnr(o) {
 function smsnr(i, j) {
 	var o = seznam[i].data[j];
 	var p = seznam[i];
-	sendSMS("", o.number + "\n" + p.title + "\n" + o.title);
+	// jako cislo se musi dat mezera, jinak to tam doplnuje nejaky nesmysl
+	sendSMS(" ", o.number + "\n" + p.title + "\n" + o.title);
 }
 
 
