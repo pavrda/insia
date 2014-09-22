@@ -14,7 +14,7 @@ var seznam = [
 			"title" : "Allianz pojišťovna",
 			"icon" : "allianz.png",
 			"data" : [ {
-				"title" : "Asisteční služba",
+				"title" : "Asistenční služba",
 				"number" : "+420 241 170 000"
 			} ]
 		},
@@ -98,7 +98,7 @@ var seznam = [
 			"title" : "Generali pojišťovna",
 			"icon" : "generali.png",
 			"data" : [ {
-				"title" : "Asisteční služba",
+				"title" : "Asistenční služba",
 				"number" : "+420 844 188 188"
 			} ]
 		},
