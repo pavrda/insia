@@ -25,6 +25,11 @@ function sendSMS(number, message) {
 function zajem() {
 	sendSMS("+420739348582", "Mam zajem o vice informaci o siti INSIA. Kontaktujte me, prosim");
 }
+
+function spoluprace() {
+	window.open("http://www.insia.cz/spoluprace", "_system");
+}
+
 </script>
 
 <div data-role="page" id="hlavni" class="hlavni">
@@ -122,7 +127,7 @@ function smsnr(i, j) {
 		Neurčujeme výkony, neskýváme provize,<br />
 		zaručujeme samostatnost v rozhodování.<br />
 		<br />
-		<a href="http://www.insia.cz/spoluprace" id="onasWeb">www.insia.cz/spoluprace</a><br />
+		<a href="#" onclick="spoluprace()" id="onasWeb">www.insia.cz/spoluprace</a><br />
 		<br />
 		<a href="tel:+420739348582" id="onasTel">+ 420 739 348 582</a><br />
 		</p></div>
