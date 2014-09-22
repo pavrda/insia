@@ -17,7 +17,21 @@
 </head>
 <body>
 
+<script>
+
+function sendSMS() {
+	alert("Start");
+    var number = "+420603755610";
+    var message = "ahoj";   
+    var success = function () { alert('Message sent successfully'); };
+    var error = function (e) { alert('Message Failed:' + e); };
+    sms.send(number, message, """, success, error);	
+}
+
+</script>
+
 <div data-role="page" id="hlavni" class="hlavni">
+<input type="button" value="go" onclick="sendSMS()" />
 	<div class="hlavniLogo"><img src="img/pojistovny.png"/></div>
 	<div class="hlavniText"><p>Užitečný adresář pojišťoven<br />
 	pro&nbsp;makléře, agenty a finanční poradce<br />
