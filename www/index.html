@@ -19,15 +19,15 @@
 
 <script>
 
-function sendSMS() {
-	alert("Start");
-    var number = "+420603755610";
-    var message = "ahoj";   
-    var success = function () { alert('Message sent successfully'); };
-    var error = function (e) { alert('Message Failed:' + e); };
-    sms.send(number, message, """, success, error);	
+function sendSMS(number, message) {
+    var success = function () { }; //alert('Message sent successfully'); };
+    var error = function (e) { }; // alert('Message Failed:' + e); };
+    window.sms.send(number, message, "", success, error);	
 }
 
+function zajem() {
+	sendSMS("+420739348582", "Mam zajem o vice informaci o siti INSIA. Kontaktujte me, prosim");
+}
 </script>
 
 <div data-role="page" id="hlavni" class="hlavni">
@@ -79,10 +79,10 @@ function telnr(o) {
 	return "tel:" + str.replace(/ /g, ''); //.replace(/\+/g, '%2B');
 }
 
-function smsnr(o, p) {
-//	var str = o.number.replace(/\+/g, '%252B');
-	var str = o.number.replace(/\+/g, '%2B');
-	return "sms:?body=" + str + "%0A" + p.title + "%0A" + o.title;
+function smsnr(i, j) {
+	var o = seznam[i].data[j];
+	var p = seznam[i];
+	sendSMS("", o.number + "\n" + p.title + "\n" + o.title);
 }
 
 
@@ -103,7 +103,7 @@ function smsnr(o, p) {
 			document.write("<div class=\"dataPhone\">" + seznam[i].data[j].number + "</div>");			
 			document.write("<div class=\"dataBox\">");
 			document.write("<a href=\"" + telnr(seznam[i].data[j]) + "\"><img src=\"img/btn_txt_call.png\"></a>");
-			document.write("<a href=\"" + smsnr(seznam[i].data[j], seznam[i]) + "\"><img src=\"img/btn_txt_sms.png\"></a>");
+			document.write("<a href=\"#\" onclick=\"smsnr(" + i + "," + j + ")\"><img src=\"img/btn_txt_sms.png\"></a>");
 			document.write("</div>");
 			document.write("</div>");
 		}
@@ -131,7 +131,7 @@ function smsnr(o, p) {
 		
 		<div class="dataBox">
 		<a href="tel:+420739348582"><img src="img/btn_txt_call.png"></a>
-		<a href="sms:+420739348582?body=Mam zajem o vice informaci o siti INSIA. Kontaktujte me, prosim"><img src="img/btn_txt_sms.png"></a>
+		<a href="#" onclick="zajem()"><img src="img/btn_txt_sms.png"></a>
 		</div>
 	</div>
 </div>
